@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'Neuropolitical';
+  src: url('../assets/fonts/neuropolitical.woff2') format('woff2'),
+       url('../assets/fonts/neuropolitical.woff') format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url('../assets/imagens/imagem-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Neuropolitical', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 80px;
+  height: auto;
+  z-index: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 700px;
+  gap: 15px;
+  padding: 20px;
+  z-index: 2;
+}
+
+.palavra {
+  padding: 14px;
+  border: 1px solid #00da00;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-family: 'Neuropolitical', sans-serif;
+  font-size: 1rem;
+}
+
+.palavra.selecionada {
+  background-color: #00da00;
+  color: #232323;
+  font-weight: bold;
+}
+
+.palavra.bloqueada {
+  background-color: #00ff66;
+  color: #000;
+  cursor: default;
+  pointer-events: none;
+}
+
+.palavra.erro {
+  animation: glitch 0.4s;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+}
+
+.grupos {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.grupo-tema {
+  margin: 10px 0;
+  color: #00ff66;
+  font-weight: bold;
+}
+
+.avancar {
+  display: block;
+  margin-top: 40px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #00DA00;
+  color: #232323;
+  font-family: 'Neuropolitical', sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.avancar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #00DA00;
+}
+
+.oculto {
+  display: none;
+}
+

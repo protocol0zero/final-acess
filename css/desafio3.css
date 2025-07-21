@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Courier Prime', monospace;
+  background-image: url('../assets/imagens/imagem-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #00ff55;
+  overflow-x: hidden;
+}
+
+.container-desafio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 80px;
+  height: auto;
+  z-index: 1;
+}
+
+/* BLOCO DO DESAFIO 3 */
+.grid-desafio3 {
+  display: grid;
+  grid-template-columns: repeat(5, 113px);
+  grid-template-rows: repeat(2, 113px);
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.box {
+  width: 113px;
+  height: 113px;
+  border: 1px solid #00da00;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Neuropolitical', sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+.preenchido {
+  background-color: #00da00;
+  border: none;
+  border-radius: 15px;
+}
+
+.interrogacao {
+  font-size: 96pt;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.texto-linha1 {
+  font-size: 16pt;
+  color: #ffffff;
+}
+
+.texto-linha2 {
+  font-size: 14pt;
+  color: #ffffff;
+}
+
+/* Campo de senha estilo Desafio 2 */
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.formulario input {
+  padding: 12px 16px;
+  font-size: 16px;
+  background-color: black;
+  color: #00ff88;
+  border: none;
+  border-radius: 5px;
+  width: 240px;
+  font-family: 'Courier New', monospace;
+}
+
+.formulario input::placeholder {
+  color: #00ff88;
+  opacity: 0.7;
+}
+
+/* Botão ENVIAR com Neuropolitical */
+.formulario button {
+  padding: 12px 18px;
+  font-size: 14px;
+  background-color: #00ff88;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Neuropolitical', sans-serif;
+}
+
+/* Efeito de glitch mais visível no botão */
+.glitch-btn {
+  animation: glitch 0.3s linear;
+}
+
+@keyframes glitch {
+  0%   { transform: translate(0, 0) scale(1); }
+  20%  { transform: translate(-3px, 2px) scale(1.02); }
+  40%  { transform: translate(3px, -2px) scale(0.98); }
+  60%  { transform: translate(-2px, 1px) scale(1.03); }
+  80%  { transform: translate(2px, -1px) scale(0.97); }
+  100% { transform: translate(0, 0) scale(1); }
+}

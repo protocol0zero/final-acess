@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Protocol ZER0</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="home">
+
+  <!-- Logo -->
+  <img src="assets/imagens/logo.png" alt="Logo Protocolo" class="logo" />
+
+  <!-- Botão central -->
+  <div class="center-container">
+    <button class="start-btn" onclick="abrirPopup()">INICIAR PROTOCOLO</button>
+  </div>
+
+  <!-- POP-UP -->
+  <div id="popup" class="popup oculto" onclick="fecharPopup(event)">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <h2 class="popup-titulo">BEM-VINDOS,<br>AGENTES.</h2>
+      <div class="popup-texto">
+        <p>Acesso concedido ao <strong>Julgamento Final</strong>.</p>
+        <p>O <strong>Protocolo ZERO</strong> foi ativado, e ele não será decifrado sozinho.</p>
+        <p>O tempo está contra vocês. A cada segundo, a conexão se desfaz.</p>
+        <ul>
+          <li><strong>5 desafios</strong> os aguardam — cada um projetado para testar sua lógica, união e coragem.</li>
+          <li><strong>Apenas um agente</strong> deverá compartilhar a transmissão para liderar a missão.</li>
+        </ul>
+        <p>Boa sorte. Vocês vão precisar.</p>
+      </div>
+      <button class="popup-btn" onclick="location.href='desafio1.html'">INICIAR PROTOCOLO</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function abrirPopup() {
+      document.getElementById("popup").classList.remove("oculto");
+    }
+
+    function fecharPopup(event) {
+      document.getElementById("popup").classList.add("oculto");
+    }
+
+    // Fechar com tecla ESC
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        fecharPopup();
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

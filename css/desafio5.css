@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier Prime', monospace;
+  background-image: url('../assets/imagens/imagem-bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  color: #00ff00;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 80px;
+  height: auto;
+  z-index: 1;
+}
+
+/* Box de Pergunta */
+#question-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 20px #00ff00;
+  border-radius: 10px;
+  width: 600px;
+  text-align: center;
+}
+
+/* Timer ajustado mais para cima */
+#timer-fixed {
+  position: absolute;
+  top: calc(50% - 230px); /* ← Subiu mais */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Neuropolitical', sans-serif;
+  font-size: 4.5rem;
+  color: #00ff00;
+  z-index: 999;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+  pointer-events: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#timer-fixed.red {
+  color: red;
+  text-shadow: 0 0 10px red, 0 0 20px red;
+}
+
+#timer-fixed.blink {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+#question-text {
+  font-size: 20px;
+  color: #00ff00;
+  margin-bottom: 20px;
+}
+
+#answer-input {
+  width: 70%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  outline: none;
+}
+
+#submit-btn {
+  padding: 12px 20px;
+  margin-left: 10px;
+  font-size: 14px;
+  background-color: #00ff00;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Glitch corrigido */
+.error-glitch {
+  animation: glitch 0.2s linear 2;
+}
+
+@keyframes glitch {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+

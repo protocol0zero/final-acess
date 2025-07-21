@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desafio 3 – Protocol ZER0</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Neuropolitical&display=swap" />
+
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- CSS Específico -->
+  <link rel="stylesheet" href="css/desafio3.css" />
+</head>
+<body>
+  <!-- Logo -->
+  <img src="assets/imagens/logo.png" alt="Logo Protocol Zero" class="logo" />
+
+  <!-- Conteúdo do Desafio -->
+  <div class="container-desafio">
+    <div class="grid-desafio3">
+      <!-- Primeira linha -->
+      <div class="box preenchido"><span class="interrogacao">?</span></div>
+      <div class="box"><span class="texto-linha1">Topo</span></div>
+      <div class="box"><span class="texto-linha1">Yordle</span></div>
+      <div class="box"><span class="texto-linha1">Freijord</span></div>
+      <div class="box"><span class="texto-linha1">2014</span></div>
+
+      <!-- Segunda linha -->
+      <div class="box preenchido"><span class="interrogacao">?</span></div>
+      <div class="box"><span class="texto-linha2">Aquático</span></div>
+      <div class="box"><span class="texto-linha2">Anatidae</span></div>
+      <div class="box"><span class="texto-linha2">Mundial</span></div>
+      <div class="box"><span class="texto-linha2">Ovíparo</span></div>
+    </div>
+
+    <!-- Campo de senha -->
+    <div class="formulario">
+      <input type="text" id="senha" placeholder="Digite a senha..." />
+      <button onclick="verificarSenha()">ENVIAR</button>
+    </div>
+  </div>
+
+  <!-- Script de verificação -->
+  <script>
+    function verificarSenha() {
+      const input = document.getElementById("senha");
+      const botao = document.querySelector(".formulario button");
+      const senha = input.value.trim().toLowerCase();
+
+      if (senha === "vivo") {
+        window.location.href = "desafio4.html";
+      } else {
+        botao.classList.add("glitch-btn");
+        setTimeout(() => {
+          botao.classList.remove("glitch-btn");
+        }, 300);
+      }
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        verificarSenha();
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
