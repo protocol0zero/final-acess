@@ -13,7 +13,7 @@ const grupos = [
   },
   {
     tema: "Jogadores e ex-jogadores de e-sports",
-    palavras: ["CARIOK", "BAIANO", "FALB", "CAUANZIN"]
+    palavras: ["MIMI", "BAIANO", "FALB", "CAUANZIN"]
   }
 ];
 
