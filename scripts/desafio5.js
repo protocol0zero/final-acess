@@ -9,7 +9,7 @@ const perguntas = [
   { pergunta: "8. Qual personagem feminino seu amigo mais usa no Dead by Daylight (formato: Apenas Nome)", resposta: "Nea" },
   { pergunta: "9. Em qual ano seu amigo começou a jogar League of Legends?", resposta: "2010" },
   { pergunta: "10. Qual o nick do seu amigo no Habbo?", resposta: "Saax" },
-  { pergunta: "11. Qual Pokémon seu amigo está tentando capturar no PXG?", resposta: "Smeargle 8" },
+  { pergunta: "11. Qual o número da sorte do seu amigo?", resposta: "23" },
   { pergunta: "12. Qual curso (faculdade) seu amigo é formado?", resposta: "Publicidade e Propaganda" },
   { pergunta: "13. Quantas tatuagens o seu amigo tem?", resposta: "3" },
   { pergunta: "14. Qual o nome do animal de estimação do seu amigo?", resposta: "Safira" },
